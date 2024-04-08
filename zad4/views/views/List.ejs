@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en"
+%- include() %>
+<body>
+    %- include('partials/navigation') %>
+    <h1>%= pageTitle %></h1>
+    <ul>
+        % students.forEach(student => { %>
+            <li>
+                <p>%= students.fullName %></p>
+                <p>%= students.code %></p>
+                <p>%= students.fieldOfStudies %></p>
+            </li>
+        % }); %>
+    </ul>
+</body>
+</html>
